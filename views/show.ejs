@@ -1,0 +1,21 @@
+<% include ./partials/header %>
+            <div id="centerForm" >
+                    <div>
+                    <h2> <%= blog.title %> </h2>
+                    </div>
+                    <br>
+                    <div>
+                    <img src="<%= blog.img %>">
+                    </div>
+                    <div>
+                    <br>
+                    <p> <%= blog.body %> </p>
+                    </div>
+                    <br>
+                    <a href="/blogs/<%=blog._id%>/edit" class="ui button">Edit</a>
+                    
+                    <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+                        <button class="ui red button">Delete</button>
+                    </form>
+            </div>
+<% include ./partials/footer %>

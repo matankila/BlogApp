@@ -1,0 +1,17 @@
+<% include ./partials/header %>
+            <div id="centerForm" >
+                <form class="ui form" action="/blogs" method="POST">
+                    <h1>New Blog Form</h1>
+                    <div class="field">
+                    <input name="blog[title]" type="text" placeholder="Title" required >
+                    </div>
+                    <div class="field">
+                    <input name="blog[img]" type="text" placeholder="Img URL" required >
+                    </div>
+                    <div class="field">
+                    <textarea name="blog[body]" rows="10" cols="50" placeholder="Blog Body" required ></textarea>
+                    </div>
+                    <button class="ui button" type="submit">Submit</button>
+                </form>
+            </div>
+<% include ./partials/footer %>

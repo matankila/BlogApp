@@ -1,0 +1,27 @@
+<% include ./partials/header %>
+            <h1>Welcome To Blog Browes Page</h1>
+            <% blogs.forEach(function(blog){ %>
+            <div>
+                <div class="ui items">
+                    <div class="item">
+                        <div class="image">
+                            <img src="<%= blog.img %>">
+                        </div>
+                        <div class="content">
+                            <a class="header"><%= blog.title %></a>
+                            <div class="meta">
+                                <span><%= blog.created.toDateString() %></span>
+                            </div>
+                            <div class="description">
+                                <p><%= blog.body.substring(0,50) %>...</p>
+                            </div>
+                            <div class="extra">
+                                <a href="/blogs/<%=blog._id%>">Additional Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <% }); %>
+<% include ./partials/footer %>
